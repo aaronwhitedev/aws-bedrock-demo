@@ -28,7 +28,7 @@ def generate_image(prompt: str, seed: int, index: int):
     # Create the client and invoke the model.
     bedrock = boto3.client(service_name="bedrock-runtime")
     body = json.dumps(payload)
-    model_id = "stability.stable-diffusion-xl-v0"
+    model_id = "stability.stable-diffusion-xl-v1"
     response = bedrock.invoke_model(
         body=body,
         modelId=model_id,
